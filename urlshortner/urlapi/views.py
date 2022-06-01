@@ -20,7 +20,6 @@ class CreateURLShortner(APIView):
         if serializer.is_valid():
             serializer.save()
             short_url = "http://localhost:8000/" + serializer.data['short_url']
-            # return Response({"status": "success", "short_url": short_url}, status=status.HTTP_200_OK)
             return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
         else:
             return Response({"status": "error", "error": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
