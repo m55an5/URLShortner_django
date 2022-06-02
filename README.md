@@ -1,10 +1,10 @@
-python -m venv drf_env
-source drf_env/bin/activate
-python -m pip install -r requirements.txt
+## Clone Git Repository or Download Code ( inside folder where you want the code ) 
+https://github.com/m55an5/URLShortner_django
 
-/Users/manjotssandhu/work/URLShortner
-python -m pip install --upgrade pip      
-python -m pip install -r requirements.txt
+## from the root folder
 
-python -m pytest urlshortner/ --cache-clear -v
-python manage.py runserver
+## docker build image
+docker build -t django-url-shortner-app .
+
+## run container 
+docker container run -it -p 8000:8000 django-url-shortner-app 
